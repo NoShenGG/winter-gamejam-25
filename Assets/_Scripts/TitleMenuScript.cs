@@ -1,16 +1,59 @@
 using UnityEngine;
+using System.Collections;
+using UnityEngine.SceneManagement;
+using JetBrains.Annotations;
 
 public class TitleMenuScript : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    public GameObject titleButtons;
+
+    public GameObject backPanel;
+    public GameObject optionsList;
+    public GameObject levelSelectList;
+
     void Start()
     {
-        
+
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+
+
+    public void NewGame(){
+        SceneManager.LoadScene("");
     }
+
+
+    public void LevelSelect()
+    {
+        titleButtons.SetActive(false);
+        levelSelectList.SetActive(true);
+        backPanel.SetActive(true);
+    }
+
+    public void Options(){
+        titleButtons.SetActive(false);
+        optionsList.SetActive(true);
+        backPanel.SetActive(true);
+    }
+
+    public void loadLevel(string s){
+        SceneManager.LoadScene(s);
+    }
+
+    public void BackButton(){
+        titleButtons.SetActive(true);
+        levelSelectList.SetActive(false);
+        optionsList.SetActive(false);
+        backPanel.SetActive(false);
+
+    }
+
+
+    public void QuitGame(){
+        Application.Quit();
+    }
+
+
+
+
 }
