@@ -34,7 +34,7 @@
 # Visual Studio
 .vs/
 .vscode/
-.vsconfig
+*.vsconfig
 *.slnx
 
 # Built Visual Studio Code Extensions
