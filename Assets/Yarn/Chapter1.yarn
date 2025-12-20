@@ -2,6 +2,7 @@
 color: yellow
 position: -519,-568
 ---
+{$playername}: 
 Fuji: ...
 <<wait 2>>
 Fuji: You're not from around here, are you?
