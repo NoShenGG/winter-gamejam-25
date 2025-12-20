@@ -1,15 +1,15 @@
 using UnityEngine;
 using Yarn.Unity;
 
+[RequireComponent(typeof(DialogueRunner))]
 public class CustomYarnCommands : MonoBehaviour {
-    [SerializeField]
-    private DialogueRunner dialogueRunner;
+    private DialogueRunner _dialogueRunner;
 
     public void Awake() {
-        if (dialogueRunner != null) {
-            // Empty for future implementation
-        } else {
-            Debug.LogError("Dialogue Runner not set in CustomYarnCommands");
-        }
+        _dialogueRunner = gameObject.GetComponent<DialogueRunner>();
+    }
+
+    private void SetDialogueBubbleType() {
+
     }
 }
