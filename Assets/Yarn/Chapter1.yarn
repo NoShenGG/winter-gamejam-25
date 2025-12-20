@@ -1,0 +1,17 @@
+﻿title: First_Meeting
+color: yellow
+position: -519,-568
+---
+Fuji: ...
+<<wait 2>>
+Fuji: You're not from around here, are you?
+-> {$playername}: No, but I need to get to the top.
+    Fuji: The top? Good luck with that.
+    Fuji: As things are, you don't stand a chance.
+    {$playername}: Gee, thanks.
+-> {$playername}: Wait, you're... Are you a talking cat?
+    Fuji: Yeah? What's it to you?
+    {$playername}: I must be going crazy.
+Fuji: Whatever.
+Fuji: The sun will set soon anyways.
+===

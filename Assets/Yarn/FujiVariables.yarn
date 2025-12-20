@@ -1,0 +1,4 @@
+﻿title: Setup
+---
+<<declare $playername = "Player">>
+===
