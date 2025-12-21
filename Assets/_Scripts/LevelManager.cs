@@ -44,7 +44,9 @@ public class LevelManager : MonoBehaviour
 
     public void GoToNextRoom()
     {
+        UnloadRoom(currentRoomIndex);
         LoadRoom(currentRoomIndex + 1);
+        
         // player.transform.position = rooms[currentRoomIndex].RespawnPoint;
     }
     
@@ -57,8 +59,9 @@ public class LevelManager : MonoBehaviour
         }
         rooms[index].ActivateRoom();
         currentRoomIndex = index;
-        Vector2 targetPosition = new Vector3(rooms[index].CameraPosition.x, rooms[index].CameraPosition.y, -10);
-        Vector2[] bounds = rooms[index].GetBounds(); // Gets bounds as bottom_left, top_right
+
+        Vector2 targetPosition = new Vector3(rooms[currentRoomIndex].CameraPosition.x, rooms[currentRoomIndex].CameraPosition.y, -10);
+        Vector2[] bounds = rooms[currentRoomIndex].GetBounds(); // Gets bounds as bottom_left, top_right
         BoundedCamera.Instance.TransitionToNextRoom(targetPosition, bounds[0], bounds[1]);
     }
     

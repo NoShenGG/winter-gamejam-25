@@ -4,7 +4,7 @@ public class BoundedCamera : MonoBehaviour
 {   
     [SerializeField] private Vector3 camera_offset;
     [SerializeField] private float smooth_speed;
-    [SerializeField] private GameObject player;
+    [SerializeField] private PlayerController player;
     public static BoundedCamera Instance; 
     private Vector3 targetLocation;
     // private Vector3[] bounds = new Vector3[2]; // In TopRight, BottomRight, BottomLeft, TopLeft order. Bounds bind the actual camera location; the camera will just out a bit more.
@@ -32,12 +32,15 @@ public class BoundedCamera : MonoBehaviour
         if (_InRoomTransition)
         {
             transform.position = Vector3.Lerp(transform.position, targetLocation, smooth_speed);
-            if (Vector3.Distance(transform.position, targetLocation) < 0.01f) _InRoomTransition = false;
+            if (Vector3.Distance(transform.position, targetLocation) < 0.01f) {
+                _InRoomTransition = false;
+                player.ResumeAfterCameraTransition();
+            }
         } 
         else
         {
             // Camera follow until bounds
-            transform.position = player.transform.position + camera_offset;
+            transform.position = player.gameObject.transform.position + camera_offset;
             Vector3 boundedPosition = transform.position;
             if (transform.position.x < bottomLeftBoundary.x) boundedPosition.x = bottomLeftBoundary.x;
             if (transform.position.y < bottomLeftBoundary.y) boundedPosition.y = bottomLeftBoundary.y;
@@ -53,5 +56,6 @@ public class BoundedCamera : MonoBehaviour
         bottomLeftBoundary = bottomLeftBound;
         topRightBoundary = topRightBound;
         _InRoomTransition = true;
+        player.PauseForCameraTransition();
     }
 }

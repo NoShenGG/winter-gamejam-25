@@ -10,7 +10,7 @@ public class RoomTrigger : MonoBehaviour
     [SerializeField] private type _type;
     void OnTriggerEnter2D(Collider2D other)
     {
-         Debug.Log("Try to reset the room, yipee!");
+        // Debug.Log("Try to reset the room, yipee!");
         if (other.tag.Equals("Player"))
         {
             switch (_type)
