@@ -1,10 +1,13 @@
 fileFormatVersion: 2
-guid: cea74cb7df565fa48874ac64f4ae67fa
+guid: c7a73117c0f2d924bb3a7e7214f441f8
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -4664651592801613268
-    second: titlescreen_scuffed_0
+      213: -6005634822390367548
+    second: bg_clouds_0
+  - first:
+      213: 8341810602042095085
+    second: bg_clouds_1
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +103,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: titlescreen_scuffed_0
+      name: bg_clouds_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 320
-        height: 180
+        width: 640
+        height: 204
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +118,30 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: c2a891a3714d34fb0800000000000000
-      internalID: -4664651592801613268
+      spriteID: 4cab4b0c2f2b7aca0800000000000000
+      internalID: -6005634822390367548
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bg_clouds_1
+      rect:
+        serializedVersion: 2
+        x: 280
+        y: 146
+        width: 88
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: de57e46bb8014c370800000000000000
+      internalID: 8341810602042095085
       vertices: []
       indices: 
       edges: []
@@ -135,7 +160,8 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      titlescreen_scuffed_0: -4664651592801613268
+      bg_clouds_0: -6005634822390367548
+      bg_clouds_1: 8341810602042095085
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: cea74cb7df565fa48874ac64f4ae67fa
+guid: bbc0cc1a98ee09445b97c600dfe87219
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -4664651592801613268
-    second: titlescreen_scuffed_0
+      213: -6360638140055760483
+    second: bg_sky_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: titlescreen_scuffed_0
+      name: bg_sky_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 320
-        height: 180
+        width: 640
+        height: 240
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: c2a891a3714d34fb0800000000000000
-      internalID: -4664651592801613268
+      spriteID: d91dc2dcf497ab7a0800000000000000
+      internalID: -6360638140055760483
       vertices: []
       indices: 
       edges: []
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      titlescreen_scuffed_0: -4664651592801613268
+      bg_sky_0: -6360638140055760483
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

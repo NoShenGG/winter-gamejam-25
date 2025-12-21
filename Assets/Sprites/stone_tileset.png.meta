@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 662f67376ed26e5498e855cef066a085
+guid: 7ce9aa5834a37cc40aaca7579352565e
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -8118557757861841130
-    second: dialoguebox_0
+      213: 8286644351601745784
+    second: stone_tileset_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -46,13 +46,13 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 16
-  spriteBorder: {x: 3, y: 3, z: 3, w: 3}
+  spritePixelsToUnits: 32
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
   alphaIsTransparency: 1
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: dialoguebox_0
+      name: stone_tileset_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 20
-        width: 4
-        height: 4
+        y: 32
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,20 +115,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 6173722bbb6155f80800000000000000
-      internalID: -8118557757861841130
+      spriteID: 87f183d1223100370800000000000000
+      internalID: 8286644351601745784
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: dialoguebox_1
+      name: stone_tileset_1
       rect:
         serializedVersion: 2
-        x: 4
-        y: 20
+        x: 16
+        y: 32
         width: 16
-        height: 4
+        height: 16
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -137,20 +137,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5c84cf52b5f11194ea31b2a07d77d263
-      internalID: 1203506523
+      spriteID: bd676164644f2bc4fa297f3d44ee49c3
+      internalID: 1659102822
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: dialoguebox_2
+      name: stone_tileset_2
       rect:
         serializedVersion: 2
-        x: 20
-        y: 20
-        width: 4
-        height: 4
+        x: 32
+        y: 32
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -159,40 +159,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c6e4d33c508e1714c98c821260909291
-      internalID: -52697757
+      spriteID: e58129fbffd9ced42b800ecf523579b7
+      internalID: -72580530
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: dialoguebox_3
+      name: stone_tileset_3
       rect:
         serializedVersion: 2
         x: 0
-        y: 4
-        width: 4
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 56aebcca2f7e85345b768d5674ab4a38
-      internalID: 789219165
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: dialoguebox_4
-      rect:
-        serializedVersion: 2
-        x: 4
-        y: 4
+        y: 16
         width: 16
         height: 16
       alignment: 0
@@ -203,19 +181,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b8b0fe172338fc842a6fbaf262d1edce
-      internalID: 1015581913
+      spriteID: e9d616c05ee9b4a44a50c3835a9f9c8f
+      internalID: 1519060066
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: dialoguebox_5
+      name: stone_tileset_4
       rect:
         serializedVersion: 2
-        x: 20
-        y: 4
-        width: 4
+        x: 16
+        y: 16
+        width: 16
         height: 16
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -225,20 +203,42 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 480fd0e9ecaef1a42885238c9ec3e99f
-      internalID: 1251740441
+      spriteID: 379648e82426a4f49bc422f653d86abd
+      internalID: -1076041155
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: dialoguebox_6
+      name: stone_tileset_5
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 16
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ceddb7eab154b9844a9cd04ec9f654fb
+      internalID: -562911985
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stone_tileset_6
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 4
-        height: 4
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -247,20 +247,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3bf99f356e9b41547853cb9767322bd3
-      internalID: 230598148
+      spriteID: 7b69be7f2d4be34468d85ceeaac14f3b
+      internalID: -176399027
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: dialoguebox_7
+      name: stone_tileset_7
       rect:
         serializedVersion: 2
-        x: 4
+        x: 16
         y: 0
         width: 16
-        height: 4
+        height: 16
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -269,20 +269,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c13bc0fd828fc2a40a09f0de05cf6bab
-      internalID: 182381460
+      spriteID: 938ff7145957cc24c89b8b78269ca08c
+      internalID: -1517324562
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: dialoguebox_8
+      name: stone_tileset_8
       rect:
         serializedVersion: 2
-        x: 20
+        x: 32
         y: 0
-        width: 4
-        height: 4
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -291,8 +291,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 22383e3a826c1174ebd49798838cf708
-      internalID: -2103267588
+      spriteID: ce588262f25df264384fed898b6c36db
+      internalID: 757442460
       vertices: []
       indices: 
       edges: []
@@ -301,8 +301,8 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: ec54cac8afb2eb44396edcd4d0b7b193
-    internalID: 1420183758
+    spriteID: 317c4a4f121961248b5963030f620473
+    internalID: 0
     vertices: []
     indices: 
     edges: []
@@ -311,17 +311,17 @@ TextureImporter:
     spriteCustomMetadata:
       entries:
       - key: SpriteEditor.SliceSettings
-        value: '{"sliceOnImport":false,"gridCellCount":{"x":3.0,"y":3.0},"gridSpriteSize":{"x":8.0,"y":8.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":2,"keepEmptyRects":false,"isAlternate":false}'
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":3.0,"y":3.0},"gridSpriteSize":{"x":16.0,"y":16.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":2,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
-      dialoguebox_0: -8118557757861841130
-      dialoguebox_1: 1203506523
-      dialoguebox_2: -52697757
-      dialoguebox_3: 789219165
-      dialoguebox_4: 1015581913
-      dialoguebox_5: 1251740441
-      dialoguebox_6: 230598148
-      dialoguebox_7: 182381460
-      dialoguebox_8: -2103267588
+      stone_tileset_0: 8286644351601745784
+      stone_tileset_1: 1659102822
+      stone_tileset_2: -72580530
+      stone_tileset_3: 1519060066
+      stone_tileset_4: -1076041155
+      stone_tileset_5: -562911985
+      stone_tileset_6: -176399027
+      stone_tileset_7: -1517324562
+      stone_tileset_8: 757442460
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
