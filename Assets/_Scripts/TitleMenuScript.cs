@@ -14,41 +14,16 @@ public class TitleMenuScript : MonoBehaviour
     public GameObject optionsList;
     public GameObject levelSelectList;
 
-    public TMP_Dropdown displaySelection;
-    private List<string> displayNames;
-
-    void Start()
-    {
+    void Start(){
         titleButtons.SetActive(true);
         optionsList.SetActive(false);
         levelSelectList.SetActive(false);
         backPanel.SetActive(false);
-
-        displaySelection.ClearOptions();
-
-        /*
-        displayNames = new List<string>();
-
-        if (Display.displays.Length > 1)
-        {
-            for(int x = 1; x < Display.displays.Length; x++)
-            {
-                Display.displays[x].Activate();
-                displayNames.Add("Monitor: " + x);
-            }
-        }
-
-        displaySelection.AddOptions(displayNames);
-        */
-
     }
-
-
 
     public void NewGame(){
         SceneManager.LoadScene("");
     }
-
 
     public void LevelSelect()
     {
@@ -72,21 +47,12 @@ public class TitleMenuScript : MonoBehaviour
         levelSelectList.SetActive(false);
         optionsList.SetActive(false);
         backPanel.SetActive(false);
-
     }
-
 
     public void QuitGame(){
         Application.Quit();
     }
 
-    public void SetDisplay(int displayIndex)
-    {
-        if(displayIndex < Display.displays.Length)
-        {
-            
-        }
-    }
 
 
 
