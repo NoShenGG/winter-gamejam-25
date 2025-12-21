@@ -2,6 +2,8 @@
 color: yellow
 position: -519,-568
 ---
+{$playername}: Made it!
+<<wait 2>>
 {$playername}: 
 Fuji: ...
 <<wait 2>>

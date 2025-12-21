@@ -1,26 +1,22 @@
 using System;
 using System.Collections;
+using System.Threading;
+using TMPro;
 using UnityEngine;
+using Yarn.Markup;
 using Yarn.Unity;
 
 [RequireComponent(typeof(Animator))]
 public class DialogueActor : MonoBehaviour {
     #region Animation
+
     private Animator _animator;
     private bool _triggerAnimationEnd = false;
+
     #endregion
 
     private void Awake() {
         _animator = GetComponent<Animator>();
-    }
-
-    [YarnCommand("set_emotion")]
-    public void SetEmotion(string emotion) {
-        switch (emotion) {
-            default:
-                Debug.LogErrorFormat("Emotion \"{0}\" is invalid!", emotion);
-                break;
-        }
     }
 
     [YarnCommand("play_anim")]
