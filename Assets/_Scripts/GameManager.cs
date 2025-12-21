@@ -22,15 +22,10 @@ public class GameManager : MonoBehaviour {
     #endregion
 
     public Dictionary<string, DialogueActor> DialogueActors;
-    public Camera MainCamera;
 
     private void Awake() {
         Initialize();
         DialogueActors = new Dictionary<string, DialogueActor>();
-    }
-
-    private void Start() {
-        MainCamera = Camera.main;
     }
 
     private void Initialize() {

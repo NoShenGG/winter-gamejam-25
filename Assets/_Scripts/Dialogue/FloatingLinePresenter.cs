@@ -11,6 +11,8 @@ public class FloatingLinePresenter : DialoguePresenterBase {
         Instant, ByLetter, ByWord,
     }
 
+    private Camera _camera;
+
     public CanvasGroup canvasGroup;
     public TMP_Text lineText;
     public bool useFadeEffect = true;
@@ -88,6 +90,10 @@ public class FloatingLinePresenter : DialoguePresenterBase {
         }
     }
 
+    private void Start() {
+        _camera = Camera.main;
+    }
+
     public override YarnTask OnDialogueCompleteAsync() {
         if (canvasGroup != null) {
             canvasGroup.alpha = 0;
@@ -129,7 +135,7 @@ public class FloatingLinePresenter : DialoguePresenterBase {
         }
 
         Vector3 topCenterPoint = spriteRenderer.bounds.center + new Vector3(0, spriteRenderer.bounds.extents.y, 0);
-        Vector3 newPivot = GameManager.Instance.MainCamera.WorldToScreenPoint(topCenterPoint);
+        Vector3 newPivot = _camera.WorldToScreenPoint(topCenterPoint);
         newPivot.z = 0;
         transform.position = newPivot;
 
