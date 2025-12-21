@@ -19,6 +19,8 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private float max_fall_speed;
     [SerializeField] private float max_coyote_time;
 
+    [SerializeField] private Animator animator;
+
     // Hidden backend Player Parameters
     private float coyote_timer;
     private Vector2 playerSize;
@@ -108,7 +110,10 @@ public class PlayerController : MonoBehaviour
         if (_isGrabbing) {
             rb.linearVelocityY = playerInput.y * climb_speed;
             rb.linearVelocityX = 0;
-        } 
+        }
+
+        animator.SetFloat("Vel_H", rb.linearVelocityX);
+        animator.SetBool("Grounded", player_is_touching_ground);
     }
 
     public void CheckNextToWall()

@@ -191,6 +191,7 @@ MonoBehaviour:
   fall_acceleration: 0.2
   max_fall_speed: -4
   max_coyote_time: 2
+  animator: {fileID: 8845109155809358664}
 --- !u!50 &2861252110327661566
 Rigidbody2D:
   serializedVersion: 5
