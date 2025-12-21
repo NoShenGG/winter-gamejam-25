@@ -1,5 +1,6 @@
 using UnityEngine;
 using System.Collections.Generic;
+using UnityEditor.ShaderGraph.Internal;
 
 public class Room : MonoBehaviour
 {
@@ -68,4 +69,13 @@ public class Room : MonoBehaviour
     public List<GameObject> GetObjectsInRoom() {
         return objects_in_room;
     }
+
+    public void updateRespawn(float x, float y)
+    {
+        respawn_point = new Vector2(x, y);
+        Debug.Log("updated respawn to:" + x + " , " + y);
+    }
+
+
+
 }
