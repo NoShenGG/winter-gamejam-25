@@ -2,14 +2,19 @@
 color: yellow
 position: -519,-568
 ---
-Yuki: Made it!
-<<wait 2>>
+Yuki: Phew!
+<<wait 1>>
 <<set_floating true>>
 Yuki: ...
-Fuji: ...
 <<set_floating false>>
-<<wait 2>>
+Yuki: Why did I think a photo at the summit would be a good idea?
+Yuki: Even if it would be the perfect shot for the competition, climbing alone at sunset can't be a good idea.
+<<wait 1>>
+<<set_floating true>>
+Fuji: ...
 Fuji: You're not from around here, are you?
+Yuki: !
+<<set_floating false>>
 -> Yuki: No, but I need to get to the top.
     Fuji: The top? Good luck with that.
     Fuji: As things are, you don't stand a chance.
@@ -18,5 +23,6 @@ Fuji: You're not from around here, are you?
     Fuji: Yeah? What's it to you?
     Yuki: I must be going crazy.
 Fuji: Whatever.
-Fuji: The sun will set soon anyways.
+Fuji: The sun will soon set.
+Fuji: You might want to put that camera of yours to good use.
 ===

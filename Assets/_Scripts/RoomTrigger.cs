@@ -1,13 +1,18 @@
 using UnityEngine;
+using Yarn.Unity;
 
 public class RoomTrigger : MonoBehaviour
 {
     enum type {
         Death,
         GoNext,
-        GoPrevious
+        GoPrevious,
+        Cutscene
     }
     [SerializeField] private type _type;
+    [SerializeField] private DialogueRunner cutsceneDialogue;
+    [SerializeField] private string cutsceneDialogueTitle;
+    private bool _cutsceneTriggered = false;
     void OnTriggerEnter2D(Collider2D other)
     {
         // Debug.Log("Try to reset the room, yipee!");
@@ -22,6 +27,11 @@ public class RoomTrigger : MonoBehaviour
                     LevelManager.Instance.GoToNextRoom();
                     break;
                 case type.GoPrevious:
+                    break;
+                case type.Cutscene:
+                    if (!_cutsceneTriggered) {
+                        cutsceneDialogue.StartDialogue(cutsceneDialogueTitle);
+                    }
                     break;
                 default:
                     break;
