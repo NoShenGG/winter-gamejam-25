@@ -2,6 +2,9 @@ using UnityEngine;
 using System.Collections;
 using UnityEngine.SceneManagement;
 using JetBrains.Annotations;
+using Unity.VisualScripting;
+using TMPro;
+using System.Collections.Generic;
 
 public class TitleMenuScript : MonoBehaviour
 {
@@ -11,20 +14,16 @@ public class TitleMenuScript : MonoBehaviour
     public GameObject optionsList;
     public GameObject levelSelectList;
 
-    void Start()
-    {
+    void Start(){
         titleButtons.SetActive(true);
         optionsList.SetActive(false);
         levelSelectList.SetActive(false);
         backPanel.SetActive(false);
     }
 
-
-
     public void NewGame(){
         SceneManager.LoadScene("");
     }
-
 
     public void LevelSelect()
     {
@@ -48,13 +47,12 @@ public class TitleMenuScript : MonoBehaviour
         levelSelectList.SetActive(false);
         optionsList.SetActive(false);
         backPanel.SetActive(false);
-
     }
-
 
     public void QuitGame(){
         Application.Quit();
     }
+
 
 
 
