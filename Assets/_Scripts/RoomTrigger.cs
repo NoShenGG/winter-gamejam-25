@@ -33,6 +33,7 @@ public class RoomTrigger : MonoBehaviour
                         DialogueRunner dialogue = GameManager.Instance.DialogueRunner;
                         dialogue.StartDialogue(cutsceneDialogueTitle);
                         GameManager.Instance.PlayerController.DisableInput();
+                        GameManager.Instance.CameraUIOverlay.CanvasGroup.alpha = 0;
                         dialogue.onDialogueComplete.AddListener(OnDialogueComplete);
                     }
                     break;
@@ -48,6 +49,7 @@ public class RoomTrigger : MonoBehaviour
 
     void OnDialogueComplete() {
         _cutsceneTriggered = true;
+        GameManager.Instance.CameraUIOverlay.CanvasGroup.alpha = 1;
         GameManager.Instance.PlayerController.EnableInput();
     }
 }

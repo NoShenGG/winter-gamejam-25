@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using static UnityEngine.LowLevelPhysics2D.PhysicsBody;
 
 public class PlayerController : MonoBehaviour
 {
@@ -234,11 +235,46 @@ public class PlayerController : MonoBehaviour
             }
         }
 
-        foreach (GameObject obj in visibles) {
-            obj.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Kinematic;
+        //foreach (GameObject obj in visibles) {
+        //    if (obj.tag.Equals("FreezeFrame")) {
+        //        if (obj.TryGetComponent<Rigidbody2D>(out Rigidbody2D rb)) {
+        //            rb.bodyType = RigidbodyType2D.Kinematic;
+        //        }
+        //        if (obj.TryGetComponent<MovingPlatform>(out MovingPlatform platform)) {
+        //            platform.enabled = false;
+        //        }
+        //    }
+        //}
+
+        List<GameObject> overlap = GameManager.Instance.CameraUIOverlay.FindOverlappingObjects(visibles);
+        foreach (GameObject overlapObject in overlap) {
+            if (overlapObject.tag.Equals("FreezeFrame")) {
+                if (overlapObject.TryGetComponent<Rigidbody2D>(out Rigidbody2D rb)) {
+                    rb.bodyType = RigidbodyType2D.Kinematic;
+                }
+                if (overlapObject.TryGetComponent<MovingPlatform>(out MovingPlatform platform)) {
+                    platform.enabled = false;
+                }
+                overlapObject.GetComponent<SpriteRenderer>().color = Color.lightGoldenRodYellow;
+
+                visibles.Remove(overlapObject);
+            }
         }
+
+        foreach (GameObject obj in visibles) {
+            invisibles.Add(obj);
+        }
+
         foreach (GameObject obj in invisibles) {
-            obj.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Dynamic;
+            if (obj.tag.Equals("FreezeFrame")) {
+                if (obj.TryGetComponent<Rigidbody2D>(out Rigidbody2D rb)) {
+                    rb.bodyType = RigidbodyType2D.Dynamic;
+                }
+                if (obj.TryGetComponent<MovingPlatform>(out MovingPlatform platform)) {
+                    platform.enabled = true;
+                }
+                obj.GetComponent<SpriteRenderer>().color = Color.white;
+            }
         }
     }
 

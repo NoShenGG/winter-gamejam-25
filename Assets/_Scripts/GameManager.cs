@@ -25,6 +25,7 @@ public class GameManager : MonoBehaviour {
     public PlayerController PlayerController;
     public DialogueRunner DialogueRunner;
     public List<GameObject> VisibleObjects;
+    public CameraOverlay CameraUIOverlay;
 
     private void Awake() {
         Initialize();
