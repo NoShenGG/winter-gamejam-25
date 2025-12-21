@@ -32,12 +32,13 @@ public class PlayerController : MonoBehaviour
     private Rigidbody2D rb;
     private CapsuleCollider2D boxCollider;
     private float detectionRadius = 0.03f;
-    private float playerDirection;
+    public float playerDirection;
     private LayerMask groundLayer;
     private bool _isGrabbing;
     private bool _isNextToWall;
 
     private Vector2 former_speed; // Speed I need this (for when camera transition)
+    private Boxable held_box;
     
     Vector2 playerTransform
     {
@@ -91,6 +92,7 @@ public class PlayerController : MonoBehaviour
         // _moveAction.started += OnMovePressed;
         // _moveAction.canceled += OnMoveReleased;
         _grabAction.canceled += OnGrabReleased;
+        _grabAction.started += OnGrabPressed;
         _jumpAction.started += OnJumpPressed;
         _cameraAction.started += OnCameraUsed;
         _inputEnabled = true;
@@ -189,14 +191,12 @@ public class PlayerController : MonoBehaviour
     {
         if (_isGrabbing)
         {
-            RaycastHit2D hit = Physics2D.Raycast(playerTransform, Vector2.right * playerDirection, (playerSize.x / 2) + detectionRadius * 2, groundLayer);
+            RaycastHit2D hit = Physics2D.Raycast(playerTransform, Vector2.right * playerDirection, (playerSize.x / 2) + .8f, groundLayer);
             if (!hit)
             {
                 _isGrabbing = false;
             }
         }
-        
-        
         // Debug.Log("Performing!");
     }
 
@@ -210,9 +210,29 @@ public class PlayerController : MonoBehaviour
         }
     }
 
+    public void OnGrabPressed(InputAction.CallbackContext context)
+    {
+        RaycastHit2D hit = Physics2D.Raycast(playerTransform, Vector2.right * playerDirection, (playerSize.x / 2) + 0.8f, groundLayer);
+        if (hit)
+        {
+            
+            held_box = hit.collider.GetComponent<Boxable>();
+            Debug.Log(held_box);
+            if (held_box != null)
+            {
+                held_box.Grab();
+            }
+        }
+    }
+
     public void OnGrabReleased(InputAction.CallbackContext context)
     {
         _isGrabbing = false;
+        if (held_box != null)
+        {
+            held_box.Release();
+            held_box = null;
+        }
     }
 
     public void OnCameraUsed(InputAction.CallbackContext context) {

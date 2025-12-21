@@ -10,6 +10,13 @@ public class LevelManager : MonoBehaviour
     public Room[] rooms;
     private int currentRoomIndex = 0;
     private GameObject player;
+    public PlayerController Player
+    {
+        get
+        {
+            return player.gameObject.GetComponent<PlayerController>();
+        }
+    }
 
 
     
