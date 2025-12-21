@@ -25,7 +25,7 @@ public class PlayerController : MonoBehaviour
     private Rigidbody2D rb;
     private CapsuleCollider2D boxCollider;
     private float detectionRadius = 0.03f;
-    private Vector2 playerDirection;
+    private float playerDirection;
     private LayerMask groundLayer;
     private bool _isGrabbing;
     private bool _isNextToWall;
@@ -49,11 +49,6 @@ public class PlayerController : MonoBehaviour
             }
             return false;
         }
-    }
-
-    bool IsNextToWall()
-    {
-        return Physics2D.Raycast(playerTransform, playerDirection, detectionRadius);
     }
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -99,7 +94,7 @@ public class PlayerController : MonoBehaviour
         // Read the input of the player for movement
         Vector2 playerInput = _moveAction.ReadValue<Vector2>();
         
-
+        CheckNextToWall();
         CheckGrab();
 
         float wall_grab_modifier = 1.0f;
@@ -108,18 +103,35 @@ public class PlayerController : MonoBehaviour
             wall_grab_modifier = 0.2f;   
         }
         
-        rb.linearVelocityX = playerInput.x * speed;
+        if (!_isGrabbing) rb.linearVelocityX = playerInput.x * speed;
         rb.linearVelocityY = Mathf.Max(rb.linearVelocityY - fall_acceleration * wall_grab_modifier, max_fall_speed);
-        if (_isGrabbing) rb.linearVelocityY = playerInput.y * climb_speed; 
+        if (_isGrabbing) {
+            rb.linearVelocityY = playerInput.y * climb_speed;
+            rb.linearVelocityX = 0;
+        } 
     }
 
-    public void CheckGrab()
+    public void CheckNextToWall()
     {
+        // Check the left and right of the player.
+        // This implementation is shoddy in that
+        // There's probably something better by just using the current player movement input to check for a raycast hit, 
+        // And then preserving that information for later. If future me takes a look at this, I applaud you.
+        RaycastHit2D rightHit = Physics2D.Raycast(playerTransform, Vector2.right, (playerSize.x / 2) + detectionRadius * 2, groundLayer);
+        if (rightHit) {
+            playerDirection = 1f;
+        }
+        RaycastHit2D leftHit = Physics2D.Raycast(playerTransform, Vector2.left, (playerSize.x / 2) + detectionRadius * 2, groundLayer);
+        if (leftHit)
+        {
+            playerDirection = -1f;
+        }
 
-        float xInput = _moveAction.ReadValue<Vector2>().x;
-        // Do a BoxCast in the direction of the player's input
-        RaycastHit2D hit = Physics2D.Raycast(playerTransform, Vector2.right * xInput, (playerSize.x / 2) + detectionRadius * 2, groundLayer);
+        // Preserve the current grab direction to prevent the player from floating off into oblivion
         
+        // Not sure if this works honestly, but the intention is that if right hit is true use that, else use left hit
+        // And if left hit also isn't true it shouldn't pass the hit check
+        RaycastHit2D hit = rightHit? rightHit : leftHit;
         // If the player is next to the wall, next check for grab
         if (hit)
         {
@@ -133,12 +145,26 @@ public class PlayerController : MonoBehaviour
                     rb.linearVelocityX = 0;
                     _isNextToWall = true;
                 }
+                
                 _isGrabbing = _grabAction.ReadValue<float>() == 1;
             }            
         } else
         {
             _isNextToWall = false;
         }
+    }
+
+    public void CheckGrab()
+    {
+        if (_isGrabbing)
+        {
+            RaycastHit2D hit = Physics2D.Raycast(playerTransform, Vector2.right * playerDirection, (playerSize.x / 2) + detectionRadius * 2, groundLayer);
+            if (!hit)
+            {
+                _isGrabbing = false;
+            }
+        }
+        
         
         // Debug.Log("Performing!");
     }
