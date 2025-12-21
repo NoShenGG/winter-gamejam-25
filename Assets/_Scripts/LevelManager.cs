@@ -13,7 +13,7 @@ public class LevelManager : MonoBehaviour
 
 
     
-    void Start()
+    void Awake()
     {
         if (Instance == null)
         {
@@ -24,6 +24,10 @@ public class LevelManager : MonoBehaviour
         }
         player = GameObject.Find("Player").GetComponentInChildren<PlayerController>().gameObject; // Sequenced to get Game Object with PlayerControler component
         InstantiateRoomArray();
+    }
+
+    void Start()
+    {
         LoadRoom(0);
     }
 
@@ -62,6 +66,7 @@ public class LevelManager : MonoBehaviour
 
         Vector2 targetPosition = new Vector3(rooms[currentRoomIndex].CameraPosition.x, rooms[currentRoomIndex].CameraPosition.y, -10);
         Vector2[] bounds = rooms[currentRoomIndex].GetBounds(); // Gets bounds as bottom_left, top_right
+        Debug.Log(BoundedCamera.Instance);
         BoundedCamera.Instance.TransitionToNextRoom(targetPosition, bounds[0], bounds[1]);
     }
     
