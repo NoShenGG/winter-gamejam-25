@@ -124,12 +124,15 @@ public class PlayerController : MonoBehaviour
         if (_isNextToWall) {
             wall_grab_modifier = 0.2f;   
         }
-        
+
+        animator.SetInteger("GrabDir", 0);
+
         if (!_isGrabbing) rb.linearVelocityX = playerInput.x * speed;
         rb.linearVelocityY = Mathf.Max(rb.linearVelocityY - fall_acceleration * wall_grab_modifier, max_fall_speed);
         if (_isGrabbing) {
             rb.linearVelocityY = playerInput.y * climb_speed;
             rb.linearVelocityX = 0;
+            animator.SetInteger("GrabDir", (int) playerDirection);
         }
 
         animator.SetFloat("Vel_H", rb.linearVelocityX);

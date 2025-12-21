@@ -606,7 +606,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 723ac632762313c42a5d37a892450157, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Room
-  objects_in_room: []
   respawn_point: {x: -0.75, y: -1.4}
   bottom_left_bound: {x: 31.5, y: 0}
   top_right_bound: {x: 31.5, y: 0}
@@ -673,6 +672,22 @@ PrefabInstance:
     - target: {fileID: 5943444933254157436, guid: 05d64dca99bb05c4d8480df556bad388, type: 3}
       propertyPath: m_LocalPosition.y
       value: -2.34
+      objectReference: {fileID: 0}
+    - target: {fileID: 7584868291914046000, guid: 05d64dca99bb05c4d8480df556bad388, type: 3}
+      propertyPath: m_Size.x
+      value: 0.625
+      objectReference: {fileID: 0}
+    - target: {fileID: 7584868291914046000, guid: 05d64dca99bb05c4d8480df556bad388, type: 3}
+      propertyPath: m_Size.y
+      value: 0.875
+      objectReference: {fileID: 0}
+    - target: {fileID: 7584868291914046000, guid: 05d64dca99bb05c4d8480df556bad388, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -6694560252076891167, guid: 2a9100a5210c7af408e590d445624410, type: 3}
+    - target: {fileID: 7584868291914046000, guid: 05d64dca99bb05c4d8480df556bad388, type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 3710695429626548282, guid: 05d64dca99bb05c4d8480df556bad388, type: 3}
@@ -12632,7 +12647,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 723ac632762313c42a5d37a892450157, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Room
-  objects_in_room: []
   respawn_point: {x: -0.75, y: -1.4}
   bottom_left_bound: {x: 0, y: 0}
   top_right_bound: {x: 12.5, y: 0}
