@@ -26,6 +26,7 @@ public class RoomTrigger : MonoBehaviour
                     LevelManager.Instance.GoToNextRoom();
                     break;
                 case type.GoPrevious:
+                    LevelManager.Instance.GoToPreviousRoom();
                     break;
                 case type.Cutscene:
                     if (!_cutsceneTriggered) {
