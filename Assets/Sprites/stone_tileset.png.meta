@@ -297,6 +297,28 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: stone_tileset_9
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 32
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9fe3f6b2970d1d14e8ea9067297de506
+      internalID: -1980216536
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     customData: 
     physicsShape: []
@@ -322,6 +344,7 @@ TextureImporter:
       stone_tileset_6: -176399027
       stone_tileset_7: -1517324562
       stone_tileset_8: 757442460
+      stone_tileset_9: -1980216536
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
