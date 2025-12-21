@@ -110,7 +110,6 @@ public class PlayerController : MonoBehaviour
             else wall_grab_modifier = 0.2f;
         }
         
-        // Debug.Log("Is not grounded, engage safety protocols");
         float max_fall_speed = -2;
         rb.linearVelocityY = Mathf.Max(rb.linearVelocityY - fall_acceleration * wall_grab_modifier, max_fall_speed);
     }
