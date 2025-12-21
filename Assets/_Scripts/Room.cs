@@ -3,10 +3,11 @@ using System.Collections.Generic;
 
 public class Room : MonoBehaviour
 {
-    [SerializeField] List<GameObject> objects_in_room;
+    
     [SerializeField] private Vector2 respawn_point;
     [SerializeField] private Vector2 bottom_left_bound;
     [SerializeField] private Vector2 top_right_bound;
+    
 
     public Vector2 RespawnPoint
     {
@@ -26,15 +27,17 @@ public class Room : MonoBehaviour
     }
 
     // Backend regarding where each object is reset to.
+    List<GameObject> objects_in_room = new List<GameObject>();
     List<Vector3> stored_positions = new List<Vector3>(); 
 
 
     public void InitializeRoom()
     {
-        foreach (GameObject obj in objects_in_room)
+        foreach (Transform child in transform)
         {
-            stored_positions.Add(obj.transform.position);
-        }
+            objects_in_room.Add(child.gameObject);
+            stored_positions.Add(child.position);
+        } 
     }
 
     // Function should also be used when reseting the room

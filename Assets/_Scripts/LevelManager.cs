@@ -29,6 +29,10 @@ public class LevelManager : MonoBehaviour
     void Start()
     {
         LoadRoom(0);
+        for (int i = 1; i < rooms.Length; i++)
+        {
+            UnloadRoom(i);
+        }
     }
 
     private void InstantiateRoomArray()
@@ -53,6 +57,14 @@ public class LevelManager : MonoBehaviour
         
         // player.transform.position = rooms[currentRoomIndex].RespawnPoint;
     }
+
+    public void GoToPreviousRoom()
+    {
+        UnloadRoom(currentRoomIndex);
+        LoadRoom(currentRoomIndex - 1);
+        Vector2[] bounds = rooms[currentRoomIndex].GetBounds(); // Gets bounds as bottom_left, top_right
+        BoundedCamera.Instance.TransitionToNextRoom(bounds[1], bounds[0], bounds[1]); 
+    }
     
     private void LoadRoom(int index)
     {
@@ -66,7 +78,6 @@ public class LevelManager : MonoBehaviour
 
         Vector2 targetPosition = new Vector3(rooms[currentRoomIndex].CameraPosition.x, rooms[currentRoomIndex].CameraPosition.y, -10);
         Vector2[] bounds = rooms[currentRoomIndex].GetBounds(); // Gets bounds as bottom_left, top_right
-        Debug.Log(BoundedCamera.Instance);
         BoundedCamera.Instance.TransitionToNextRoom(targetPosition, bounds[0], bounds[1]);
     }
     
