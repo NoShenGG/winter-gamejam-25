@@ -1,16 +1,19 @@
 fileFormatVersion: 2
-guid: 209e649dc7aeadf418c912d3e8f35a96
+guid: 84f49a6ca8e31e44c8af544afd9b0c5d
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 2215745761463138581
-    second: player_walk_0
+      213: -40690302821428633
+    second: playerwalk-Sheet_0
   - first:
-      213: 1700766857389022521
-    second: player_walk_1
+      213: -6477911565210233992
+    second: playerwalk-Sheet_1
   - first:
-      213: 2457880308640484884
-    second: player_walk_2
+      213: 2191894897898671289
+    second: playerwalk-Sheet_2
+  - first:
+      213: -2569396398500179222
+    second: playerwalk-Sheet_3
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -57,7 +60,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 16
+  spritePixelsToUnits: 32
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -106,13 +109,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: player_walk_0
+      name: playerwalk-Sheet_0
       rect:
         serializedVersion: 2
-        x: 1
+        x: 5
         y: 0
-        width: 14
-        height: 18
+        width: 20
+        height: 28
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -121,42 +124,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 5197690d709efbe10800000000000000
-      internalID: 2215745761463138581
+      spriteID: 762968a92607f6ff0800000000000000
+      internalID: -40690302821428633
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: player_walk_1
-      rect:
-        serializedVersion: 2
-        x: 19
-        y: 0
-        width: 14
-        height: 18
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 93d1e6c12765a9710800000000000000
-      internalID: 1700766857389022521
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: player_walk_2
+      name: playerwalk-Sheet_1
       rect:
         serializedVersion: 2
         x: 37
         y: 0
-        width: 14
-        height: 18
+        width: 20
+        height: 28
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -165,8 +146,52 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 41e81f84e152c1220800000000000000
-      internalID: 2457880308640484884
+      spriteID: 873df3db0c5d916a0800000000000000
+      internalID: -6477911565210233992
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerwalk-Sheet_2
+      rect:
+        serializedVersion: 2
+        x: 69
+        y: 0
+        width: 20
+        height: 28
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9bccd36ebcc2b6e10800000000000000
+      internalID: 2191894897898671289
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerwalk-Sheet_3
+      rect:
+        serializedVersion: 2
+        x: 101
+        y: 0
+        width: 20
+        height: 28
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ae29a3cb69ba75cd0800000000000000
+      internalID: -2569396398500179222
       vertices: []
       indices: 
       edges: []
@@ -175,7 +200,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 71313b107b2a71243a8f5ae4ba80a1dc
+    spriteID: 6fa2f9ba4a354ea4faab94e8bf0d2b72
     internalID: 0
     vertices: []
     indices: 
@@ -185,9 +210,10 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      player_walk_0: 2215745761463138581
-      player_walk_1: 1700766857389022521
-      player_walk_2: 2457880308640484884
+      playerwalk-Sheet_0: -40690302821428633
+      playerwalk-Sheet_1: -6477911565210233992
+      playerwalk-Sheet_2: 2191894897898671289
+      playerwalk-Sheet_3: -2569396398500179222
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
