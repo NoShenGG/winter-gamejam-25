@@ -13,7 +13,10 @@ public class TitleMenuScript : MonoBehaviour
 
     void Start()
     {
-
+        titleButtons.SetActive(true);
+        optionsList.SetActive(false);
+        levelSelectList.SetActive(false);
+        backPanel.SetActive(false);
     }
 
 
