@@ -196,7 +196,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 961682a14d1778f42b42ab8019a9f745, type: 3}
+<<<<<<< Updated upstream
 --- !u!1 &430343971
+=======
+--- !u!1 &322032757
+>>>>>>> Stashed changes
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -204,21 +208,34 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
+<<<<<<< Updated upstream
   - component: {fileID: 430343972}
   - component: {fileID: 430343973}
   m_Layer: 0
   m_Name: Room 1
+=======
+  - component: {fileID: 322032758}
+  - component: {fileID: 322032759}
+  - component: {fileID: 322032760}
+  m_Layer: 0
+  m_Name: Room Transition
+>>>>>>> Stashed changes
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+<<<<<<< Updated upstream
 --- !u!4 &430343972
+=======
+--- !u!4 &322032758
+>>>>>>> Stashed changes
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< Updated upstream
   m_GameObject: {fileID: 430343971}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
@@ -231,11 +248,70 @@ Transform:
   m_Father: {fileID: 754142987}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &430343973
+=======
+  m_GameObject: {fileID: 322032757}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 2.625, y: 5.75, z: 0}
+  m_LocalScale: {x: 1, y: 2, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1997980890}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &322032759
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 322032757}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Size: {x: 1, y: 1}
+  m_EdgeRadius: 0
+--- !u!114 &322032760
+>>>>>>> Stashed changes
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< Updated upstream
   m_GameObject: {fileID: 430343971}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -249,6 +325,16 @@ MonoBehaviour:
   top_right_bound: {x: 13.24, y: 0}
   camera_position: {x: 0, y: 0}
 --- !u!114 &711669623 stripped
+=======
+  m_GameObject: {fileID: 322032757}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 508d66900071a7c49bad33f9eafed44a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::RoomTrigger
+  _type: 1
+--- !u!114 &394116311 stripped
+>>>>>>> Stashed changes
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1352254488087653829, guid: 05d64dca99bb05c4d8480df556bad388, type: 3}
   m_PrefabInstance: {fileID: 966675964}
@@ -259,7 +345,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5694ab8ceeeabd94491550c7d705bc08, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerController
+<<<<<<< Updated upstream
 --- !u!1 &754142985
+=======
+--- !u!1 &536477604
+>>>>>>> Stashed changes
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -267,28 +357,110 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
+<<<<<<< Updated upstream
   - component: {fileID: 754142987}
   - component: {fileID: 754142986}
   m_Layer: 0
   m_Name: LevelManager
+=======
+  - component: {fileID: 536477605}
+  - component: {fileID: 536477606}
+  m_Layer: 0
+  m_Name: Level 2
+>>>>>>> Stashed changes
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+<<<<<<< Updated upstream
 --- !u!114 &754142986
+=======
+--- !u!4 &536477605
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 536477604}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 557815397}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &536477606
+>>>>>>> Stashed changes
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< Updated upstream
   m_GameObject: {fileID: 754142985}
+=======
+  m_GameObject: {fileID: 536477604}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 723ac632762313c42a5d37a892450157, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Room
+  objects_in_room: []
+  respawn_point: {x: -0.75, y: -1.4}
+  bottom_left_bound: {x: 31.5, y: 0}
+  top_right_bound: {x: 31.5, y: 0}
+  camera_position: {x: 31.5, y: 0}
+--- !u!1 &557815396
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 557815397}
+  - component: {fileID: 557815398}
+  m_Layer: 0
+  m_Name: Level Manager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &557815397
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 557815396}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 17.86787, y: -2.76284, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1997980890}
+  - {fileID: 536477605}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &557815398
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 557815396}
+>>>>>>> Stashed changes
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ee697e7380caa824fab8431b79f7bd5c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::LevelManager
   rooms: []
+<<<<<<< Updated upstream
 --- !u!4 &754142987
 Transform:
   m_ObjectHideFlags: 0
@@ -305,6 +477,8 @@ Transform:
   - {fileID: 430343972}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+=======
+>>>>>>> Stashed changes
 --- !u!1001 &966675964
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -314,6 +488,7 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 5943444933254157436, guid: 05d64dca99bb05c4d8480df556bad388, type: 3}
+<<<<<<< Updated upstream
       propertyPath: m_LocalPosition.x
       value: -7.12
       objectReference: {fileID: 0}
@@ -322,6 +497,13 @@ PrefabInstance:
       value: -2.63
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+=======
+      propertyPath: m_LocalPosition.y
+      value: -1.4
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 3710695429626548282, guid: 05d64dca99bb05c4d8480df556bad388, type: 3}
+>>>>>>> Stashed changes
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -338,6 +520,7 @@ GameObject:
   - component: {fileID: 1419100614}
   - component: {fileID: 1419100613}
   - component: {fileID: 1419100615}
+  - component: {fileID: 1419100616}
   m_Layer: 6
   m_Name: GroundTileMap
   m_TagString: Untagged
@@ -12080,6 +12263,18 @@ TilemapCollider2D:
   m_MaximumTileChangeCount: 1000
   m_ExtrusionFactor: 0
   m_UseDelaunayMesh: 0
+--- !u!114 &1419100616
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1419100611}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bcbef61683b8c6844b26917c09e28af3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Grabbable
 --- !u!1 &1435262648
 GameObject:
   m_ObjectHideFlags: 0
@@ -12125,7 +12320,11 @@ Transform:
   - {fileID: 1419100612}
   m_Father: {fileID: 430343972}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+<<<<<<< Updated upstream
 --- !u!1 &1666777530
+=======
+--- !u!1 &1731863878
+>>>>>>> Stashed changes
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -12133,6 +12332,7 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
+<<<<<<< Updated upstream
   - component: {fileID: 1666777531}
   m_Layer: 0
   m_Name: Triggers
@@ -12168,6 +12368,11 @@ GameObject:
   - component: {fileID: 1739865400}
   - component: {fileID: 1739865401}
   - component: {fileID: 1739865402}
+=======
+  - component: {fileID: 1731863879}
+  - component: {fileID: 1731863880}
+  - component: {fileID: 1731863881}
+>>>>>>> Stashed changes
   m_Layer: 0
   m_Name: DeathTrigger
   m_TagString: Untagged
@@ -12175,12 +12380,17 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+<<<<<<< Updated upstream
 --- !u!4 &1739865400
+=======
+--- !u!4 &1731863879
+>>>>>>> Stashed changes
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< Updated upstream
   m_GameObject: {fileID: 1739865399}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
@@ -12191,12 +12401,28 @@ Transform:
   m_Father: {fileID: 1666777531}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &1739865401
+=======
+  m_GameObject: {fileID: 1731863878}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -8.85, y: -5.13, z: 0}
+  m_LocalScale: {x: 8, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1997980890}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &1731863880
+>>>>>>> Stashed changes
 BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< Updated upstream
   m_GameObject: {fileID: 1739865399}
+=======
+  m_GameObject: {fileID: 1731863878}
+>>>>>>> Stashed changes
   m_Enabled: 1
   serializedVersion: 3
   m_Density: 1
@@ -12224,7 +12450,11 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
+<<<<<<< Updated upstream
   m_Offset: {x: 9.695412, y: -8.904552}
+=======
+  m_Offset: {x: 0, y: 0}
+>>>>>>> Stashed changes
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -12234,21 +12464,85 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
+<<<<<<< Updated upstream
   m_Size: {x: 53.763443, y: 9.419529}
   m_EdgeRadius: 0
 --- !u!114 &1739865402
+=======
+  m_Size: {x: 1, y: 1}
+  m_EdgeRadius: 0
+--- !u!114 &1731863881
+>>>>>>> Stashed changes
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< Updated upstream
   m_GameObject: {fileID: 1739865399}
+=======
+  m_GameObject: {fileID: 1731863878}
+>>>>>>> Stashed changes
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 508d66900071a7c49bad33f9eafed44a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::RoomTrigger
   _type: 0
+<<<<<<< Updated upstream
+=======
+--- !u!1 &1997980889
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1997980890}
+  - component: {fileID: 1997980891}
+  m_Layer: 0
+  m_Name: Level 1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1997980890
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1997980889}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1731863879}
+  - {fileID: 322032758}
+  m_Father: {fileID: 557815397}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1997980891
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1997980889}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 723ac632762313c42a5d37a892450157, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Room
+  objects_in_room: []
+  respawn_point: {x: -0.75, y: -1.4}
+  bottom_left_bound: {x: 0, y: 0}
+  top_right_bound: {x: 12.5, y: 0}
+  camera_position: {x: 0, y: 0}
+>>>>>>> Stashed changes
 --- !u!1 &2032509043
 GameObject:
   m_ObjectHideFlags: 0
@@ -12400,8 +12694,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BoundedCamera
   camera_offset: {x: 0, y: 0, z: -10}
+<<<<<<< Updated upstream
   smooth_speed: 0.1
   player: {fileID: 711669623}
+=======
+  smooth_speed: 0.2
+  player: {fileID: 394116311}
+>>>>>>> Stashed changes
 --- !u!1001 &1319723922093849065
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -12475,4 +12774,8 @@ SceneRoots:
   - {fileID: 96136120}
   - {fileID: 966675964}
   - {fileID: 1319723922093849065}
+<<<<<<< Updated upstream
   - {fileID: 754142987}
+=======
+  - {fileID: 557815397}
+>>>>>>> Stashed changes
