@@ -1,9 +1,7 @@
 using System;
 using System.Collections;
-using System.Threading;
-using TMPro;
+using System.Collections.Generic;
 using UnityEngine;
-using Yarn.Markup;
 using Yarn.Unity;
 
 [RequireComponent(typeof(Animator))]
@@ -15,8 +13,24 @@ public class DialogueActor : MonoBehaviour {
 
     #endregion
 
+    public string ActorName;
+
     private void Awake() {
         _animator = GetComponent<Animator>();
+
+        if (ActorName == null) {
+            Debug.LogError($"\"{gameObject.name}\" attempted to register with null ActorName");
+        } else if (ActorName.Equals("")) {
+            Debug.LogError($"\"{gameObject.name}\" attempted to register with empty ActorName");
+        }
+    }
+
+    private void Start() {
+        Dictionary<string, DialogueActor> actors = GameManager.Instance.DialogueActors;
+        if (!actors.TryAdd(ActorName, this)) {
+            Debug.LogError($"\"{gameObject.name}\" attempted to register with duplicate ActorName");
+            return;
+        }
     }
 
     [YarnCommand("play_anim")]
