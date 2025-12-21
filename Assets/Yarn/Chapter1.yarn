@@ -13,7 +13,6 @@ Yuki: Even if it would be the perfect shot for the competition, climbing alone a
 <<set_floating true>>
 Fuji: ...
 Fuji: You're not from around here, are you?
-Yuki: !
 <<set_floating false>>
 -> Yuki: No, but I need to get to the top.
     Fuji: The top? Good luck with that.

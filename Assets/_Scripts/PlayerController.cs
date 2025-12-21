@@ -1,4 +1,5 @@
-    using UnityEngine;
+using System.Collections.Generic;
+using UnityEngine;
 using UnityEngine.InputSystem;
 
 public class PlayerController : MonoBehaviour
@@ -9,6 +10,9 @@ public class PlayerController : MonoBehaviour
     private InputAction _moveAction;
     private InputAction _jumpAction;
     private InputAction _grabAction;
+    private InputAction _cameraAction;
+    private Camera _camera;
+    private bool _inputEnabled;
 
     // Player Parameters that can be modified
     [Header("Player Parameters")]
@@ -61,6 +65,16 @@ public class PlayerController : MonoBehaviour
         boxCollider = GetComponent<CapsuleCollider2D>();
         playerSize = boxCollider.size - new Vector2(0.05f, 0.05f);
         groundLayer = LayerMask.GetMask("Ground");
+        GameManager.Instance.PlayerController = this;
+        _camera = Camera.main;
+    }
+
+    public void EnableInput() {
+        _inputEnabled = true;
+    }
+
+    public void DisableInput() {
+        _inputEnabled = false;
     }
 
     private void SetControls()
@@ -70,12 +84,15 @@ public class PlayerController : MonoBehaviour
         _moveAction = _playerControls.FindAction("Move");
         _jumpAction = _playerControls.FindAction("Jump");
         _grabAction = _playerControls.FindAction("Grab");
+        _cameraAction = _playerControls.FindAction("Camera");
 
         _playerControls.Enable();
         // _moveAction.started += OnMovePressed;
         // _moveAction.canceled += OnMoveReleased;
         _grabAction.canceled += OnGrabReleased;
         _jumpAction.started += OnJumpPressed;
+        _cameraAction.started += OnCameraUsed;
+        _inputEnabled = true;
     }
 
     // Update is called once per frame
@@ -94,7 +111,10 @@ public class PlayerController : MonoBehaviour
         }
 
         // Read the input of the player for movement
-        Vector2 playerInput = _moveAction.ReadValue<Vector2>();
+        Vector2 playerInput = Vector2.zero;
+        if (_inputEnabled) {
+            playerInput = _moveAction.ReadValue<Vector2>();
+        }
         
         CheckNextToWall();
         CheckGrab();
@@ -150,8 +170,10 @@ public class PlayerController : MonoBehaviour
                     rb.linearVelocityX = 0;
                     _isNextToWall = true;
                 }
-                
-                _isGrabbing = _grabAction.ReadValue<float>() == 1;
+
+                if (_inputEnabled) {
+                    _isGrabbing = _grabAction.ReadValue<float>() == 1;
+                }
             }            
         } else
         {
@@ -176,7 +198,7 @@ public class PlayerController : MonoBehaviour
 
     public void OnJumpPressed(InputAction.CallbackContext context)
     {
-        if (CanJump)
+        if (CanJump && _inputEnabled)
         {
             rb.linearVelocityY = jump_speed;
             // Done to avoid coyote time extending the jump. Otherwise entirely unecessary
@@ -187,6 +209,34 @@ public class PlayerController : MonoBehaviour
     public void OnGrabReleased(InputAction.CallbackContext context)
     {
         _isGrabbing = false;
+    }
+
+    public void OnCameraUsed(InputAction.CallbackContext context) {
+        List<GameObject> objects = LevelManager.Instance.GetRoom().GetObjectsInRoom();
+        List<GameObject> visibles = new List<GameObject>();
+        List<GameObject> invisibles = new List<GameObject>();
+        Plane[] frustumPlanes = GeometryUtility.CalculateFrustumPlanes(_camera);
+
+        foreach (GameObject obj in objects) {
+            Renderer renderer;
+            if (!obj.TryGetComponent<Renderer>(out renderer)) {
+                invisibles.Add(obj);
+                continue;
+            }
+
+            if (GeometryUtility.TestPlanesAABB(frustumPlanes, renderer.bounds)) {
+                visibles.Add(obj);
+            } else {
+                invisibles.Add(obj);
+            }
+        }
+
+        foreach (GameObject obj in visibles) {
+            obj.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Kinematic;
+        }
+        foreach (GameObject obj in invisibles) {
+            obj.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Dynamic;
+        }
     }
 
     public void PauseForCameraTransition()

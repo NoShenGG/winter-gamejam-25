@@ -22,6 +22,9 @@ public class GameManager : MonoBehaviour {
     #endregion
 
     public Dictionary<string, DialogueActor> DialogueActors;
+    public PlayerController PlayerController;
+    public DialogueRunner DialogueRunner;
+    public List<GameObject> VisibleObjects;
 
     private void Awake() {
         Initialize();

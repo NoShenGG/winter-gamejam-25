@@ -15,6 +15,7 @@ public class CustomYarnCommands : MonoBehaviour {
     }
 
     public void Start() {
+        GameManager.Instance.DialogueRunner = _dialogueRunner;
         SetFloatingPresenter(false);
     }
 

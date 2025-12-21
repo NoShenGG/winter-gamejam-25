@@ -80,4 +80,7 @@ public class LevelManager : MonoBehaviour
         rooms[index].DeactivateRoom();
     }
     
+    public Room GetRoom() {
+        return rooms[currentRoomIndex];
+    }
 }

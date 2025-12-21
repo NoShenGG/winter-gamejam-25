@@ -137,6 +137,7 @@ public class FloatingLinePresenter : DialoguePresenterBase {
         Vector3 topCenterPoint = spriteRenderer.bounds.center + new Vector3(0, spriteRenderer.bounds.extents.y, 0);
         Vector3 newPivot = _camera.WorldToScreenPoint(topCenterPoint);
         newPivot.z = 0;
+        newPivot.y += 10;
         transform.position = newPivot;
 
         // Parse line text

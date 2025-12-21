@@ -10,7 +10,6 @@ public class RoomTrigger : MonoBehaviour
         Cutscene
     }
     [SerializeField] private type _type;
-    [SerializeField] private DialogueRunner cutsceneDialogue;
     [SerializeField] private string cutsceneDialogueTitle;
     private bool _cutsceneTriggered = false;
     void OnTriggerEnter2D(Collider2D other)
@@ -30,7 +29,10 @@ public class RoomTrigger : MonoBehaviour
                     break;
                 case type.Cutscene:
                     if (!_cutsceneTriggered) {
-                        cutsceneDialogue.StartDialogue(cutsceneDialogueTitle);
+                        DialogueRunner dialogue = GameManager.Instance.DialogueRunner;
+                        dialogue.StartDialogue(cutsceneDialogueTitle);
+                        GameManager.Instance.PlayerController.DisableInput();
+                        dialogue.onDialogueComplete.AddListener(OnDialogueComplete);
                     }
                     break;
                 default:
@@ -41,5 +43,10 @@ public class RoomTrigger : MonoBehaviour
             // LevelManager.Instance.GoToNextRoom();
         }
 
+    }
+
+    void OnDialogueComplete() {
+        _cutsceneTriggered = true;
+        GameManager.Instance.PlayerController.EnableInput();
     }
 }

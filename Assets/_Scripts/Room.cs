@@ -61,4 +61,8 @@ public class Room : MonoBehaviour
         Vector2[] bounds = {bottom_left_bound, top_right_bound}; 
         return bounds;
     }
+
+    public List<GameObject> GetObjectsInRoom() {
+        return objects_in_room;
+    }
 }
