@@ -22,7 +22,7 @@ public class TitleMenuScript : MonoBehaviour
     }
 
     public void NewGame(){
-        SceneManager.LoadScene("Level1");
+        SceneManager.LoadScene("Level One");
     }
 
     public void LevelSelect()
